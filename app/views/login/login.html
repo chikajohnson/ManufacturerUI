@@ -1,0 +1,47 @@
+﻿<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header" data-background-color="purple">
+                        <h4 class="title">User Login</h4>
+                        <!--<p class="category">Complete your profile</p>-->
+                    </div>
+                    <div class="card-content">
+                        <form name="loginForm" ng-submit="login()"; novalidate >
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group label-floating">
+                                        <label class="control-label">User Name</label>
+                                        <input type="text" class="form-control" ng-model="loginData.userName" name="userName" required>
+                                        <span style="color:red" ng-show="loginForm.userName.$dirty && loginForm.userName.$invalid">
+                                            <span ng-show="loginForm.userName.$error.required">Username is required.</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group label-floating">
+                                        <label class="control-label">Password</label>
+                                        <input type="password" class="form-control" ng-model="loginData.password" name="password" required>
+                                        <span style="color:red" ng-show="loginForm.password.$dirty && loginForm.password.$invalid">
+                                            <span ng-show="loginForm.password.$error.required">Password is required.</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row text-center">
+                                <input type="submit"  value="login" class="btn btn-primary"/>                               
+                                <div class="clearfix"></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

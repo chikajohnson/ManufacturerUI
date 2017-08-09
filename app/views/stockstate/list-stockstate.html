@@ -1,0 +1,59 @@
+﻿
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header" data-background-color="purple" style="padding:5px 10px 0 10px;">
+                        <div class="row">
+                            <div class="col-xs-3 col-md-8">
+                                <h4 style="margin-bottom:0px;"><strong>Stock States</strong>&nbsp;({{stockstates.length}})</h4>
+                            </div>
+                            <div class="col-xs-9 col-md-4">
+                                <div class="pull-right">
+                                    <a ui-sref="stockstate.list" ng-click="refreshStockState();" class="btn btn-sm btn-default"><i class="material-icons">cached</i>&nbsp;Refresh</a>
+                                    <a ui-sref="stockstate.create" class="btn btn-sm btn-success"><i class="material-icons">add_box</i>&nbsp;Create</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content table-responsive" style="border:none">
+                        <table class="table table-hover">
+                            <thead style="font-size:1.05em;">
+                            <th>Stock State</th>
+                            <th>Sellable Action</th>
+                            <th>Received Action</th>
+                            <th>Issue Action</th>
+                            <th></th>
+                            </thead>
+                            <tbody style="font-size:.9em">
+                                <tr dir-paginate="stockstate in stockstates | orderBy: '-id' | itemsPerPage: 5 | filter: searchInput"  >
+                                    <td>{{stockstate.StockState}}</td>
+                                    <td>{{stockstate.SellableAction}}</td>
+                                    <td>{{stockstate.ReceiptAction}}</td>
+                                    <td>{{stockstate.IssueAction}}</td>
+                                    <td class="td-actions text-left">
+                                        <button type="button" rel="tooltip" title="View stockstate" class="btn btn-default btn-simple btn-xs" ui-sref="stockstate.view({stockstate: stockstate.StockState})">
+                                            <i class="material-icons">visibility</i>
+                                        </button>
+                                        <button type="button" rel="tooltip" title="Edit Stockstate" class="btn btn-primary btn-simple btn-xs" ui-sref="stockstate.edit({stockstate: stockstate.StockState})">
+                                            <i class="material-icons">edit</i>
+                                        </button>
+                                        <button type="button" rel="tooltip" title="Remove stockstate" class="btn btn-danger btn-simple btn-xs" ng-click="deletestockstate">
+                                            <i class="material-icons">close</i>
+                                        </button>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                         <dir-pagination-controls max-size="5" direction-links="true" boundry-links="true"></dir-pagination-controls>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

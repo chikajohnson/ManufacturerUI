@@ -1,0 +1,59 @@
+﻿<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header" data-background-color="purple" style="padding:5px 10px 0 10px;">
+                        <div class="row">
+                            <div class="col-xs-3 col-md-8">
+                                <h4 style="margin-bottom:0px;"><strong>Client Goods Transfer Note </strong>&nbsp;({{goodTransfers.length}})</h4>
+                            </div>
+                            <div class="col-xs-9 col-md-4">
+                                <div class="pull-right">
+                                    <a ui-sref="goodtransfer.list" ng-click="refreshGoodTransfer();" class="btn btn-sm btn-default"><i class="material-icons">cached</i>&nbsp;Refresh</a>
+                                    <a ui-sref="goodtransfer.create" class="btn btn-sm btn-success"><i class="material-icons">add_box</i>&nbsp;Create</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content table-responsive" style="border:none">
+                        <table class="table table-hover">
+                            <tr>
+                                <th>Document Number</th>
+                                <th>Cross Reference</th>
+                                <th>Driver Name</th>
+                                <th>Transaction Date</th>
+                                <th></th>
+                            </tr>
+                            <tbody style="font-size:.9em">
+                                <tr dir-paginate="goodtransfer in goodTransfers | itemsPerPage: 10 | filter: searchInput">
+                                    <td>{{goodtransfer.documentNo}}</td>
+                                    <td>{{goodtransfer.crossReference}}</td>
+                                    <td>{{goodtransfer.driverName}}</td>
+                                    <td>{{goodtransfer.transactionDate | date: 'longDate'}}</td>
+                                    <td class="td-actions text-left">
+                                        <button type="button" rel="tooltip" title="View Good Tranfer Note" class="btn btn-default btn-simple btn-xs" ui-sref="goodtransfer.view({documentNo : goodtransfer.documentNo})">
+                                            <i class="material-icons">visibility</i>
+                                        </button>
+                                        <button type="button" rel="tooltip" title="Edit Good Tranfer Note" class="btn btn-primary btn-simple btn-xs" ui-sref="goodtransfer.edit({documentNo : goodtransfer.documentNo})">
+                                            <i class="material-icons">edit</i>
+                                        </button>
+                                        <button type="button" rel="tooltip" title="Remove Good Tranfer Note" class="btn btn-danger btn-simple btn-xs">
+                                            <i class="material-icons">close</i>
+                                        </button>
+
+                                    </td>
+                                </tr>                               
+                            </tbody>
+                        </table>
+                        <dir-pagination-controls max-size="5" direction-links="true" boundry-links="true"></dir-pagination-controls>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

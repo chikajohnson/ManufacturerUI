@@ -1,0 +1,124 @@
+﻿<div class="content" ng-init="hidden=true">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header" data-background-color="purple" style="padding:5px 10px 0 10px;">
+                        <div class="row">
+                            <div class="col-xs-7 col-md-8">
+                                <h4 style="margin-bottom:0px;"><strong>Create Goods Transfer Note</strong></h4>
+                            </div>
+                            <div class="col-xs-5 col-md-4">
+                                <div class="pull-right">
+                                    <a ui-sref="goodtransfer1.list" class="btn btn-sm btn-default"><i class="material-icons">keyboard_backspace</i>&nbsp;Back To List</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="row" ng-show="hidden">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <form>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group label-floating">
+                                                <label class="control-label">Reference</label>
+                                                <input type="text" class="form-control" name="referencenumber">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group label-floating">
+                                                <label class="control-label">Vehicle Number</label>
+                                                <input type="text" class="form-control" name="vehiclenumber">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group label-floating">
+                                                <label class="control-label">Driver's name</label>
+                                                <input type="text" class="form-control" name="drivername">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group label-floating">
+                                                <label class="control-label">Remark</label>
+                                                <input type="text" class="form-control" name="password">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="row text-left">
+                                            <button type="submit" class="btn btn-success" ng-click="hidden=!hidden;">Add Details</button>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                </form>                                
+                            </div>
+                        </div>
+                        <div class="row" ng-hide="hidden">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <form>
+                                    <div class="row">
+                                        <div class="col-xs-12  col-md-6 ">
+                                            <div class="form-group" style="margin-top:0px;">
+                                                <label for="transferlocation" class="bmd-label-floating">Transfer Location</label>
+                                                <select class="form-control" id="transferlocation">
+                                                    <option>Select Transfer Location</option>
+                                                    <option>Abuja</option>
+                                                    <option>Enugu</option>
+                                                    <option>Lagos</option>
+                                                    <option>Kano</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12  col-md-6 ">
+                                            <div class="form-group label-floating">
+                                                <label class="control-label">Product Code</label>
+                                                <input type="text" class="form-control" name="productcode">
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12  col-md-6 ">
+                                            <div class="form-group label-floating">
+                                                <label class="control-label">Product Name</label>
+                                                <input type="text" class="form-control" name="productname">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xs-12  col-md-6 ">
+                                            <div class="form-group label-floating">
+                                                <label class="control-label">Measurement unit</label>
+                                                <input type="number" class="form-control" name="measurementunit">
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12  col-md-6 ">
+                                            <div class="form-group label-floating">
+                                                <label class="control-label">Quantity</label>
+                                                <input type="number" class="form-control" name="quantity">
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12  col-md-6 ">
+                                            <div class="form-group label-floating">
+                                                <label class="control-label">Stock State</label>
+                                                <input type="text" class="form-control" name="stockstate">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="row text-left">
+                                            <button type="submit" class="btn btn-success" ng-click="hidden=!hidden;">Add</button>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ 

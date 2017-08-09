@@ -1,0 +1,91 @@
+﻿
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header" data-background-color="purple"  style="padding:5px 10px 0 10px;">
+                        <div class="row">
+                            <div class="col-xs-7 col-md-8">
+                                <h4 style="margin-bottom:0px;"><strong>Create Distributor</strong></h4>
+                            </div>
+                            <div class="col-xs-5 col-md-4">
+                                <div class="pull-right">
+                                    <a ui-sref="distributor.list" class="btn btn-sm btn-default"><i class="material-icons">keyboard_backspace</i>&nbsp;Back To List</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <form name="createDistributorForm">
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-6 col-lg-6">
+                                            <div class="form-group" style="margin-top:0px;">
+                                                <label for="transferlocation" class="bmd-label-floating">Depots</label>
+                                                <select ng-model="distributor.depotCode" class="form-control" name="depots" ng-options="depot.depotCode as depot.depotName for depot in depots">
+                                                    <option value="Select Depot">Select Depot</option>
+                                                </select>                                                
+                                                
+                                            </div>                                           
+                                        </div>
+                                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                            <div class="form-group label-floating">
+                                                <label class="control-label">Distributor Code</label>
+                                                <input type="text" class="form-control" name="distributorcode" ng-model="distributor.distributorCode">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">                                       
+                                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                            <div class="form-group label-floating">
+                                                <label class="control-label">Distributor Name</label>
+                                                <input type="text" class="form-control" name="distributorname" ng-model="distributor.distributorName">
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                            <div class="form-group" style="margin-top:0px;">
+                                                <label class="control-label">Commencement Date</label>
+                                                <input type="date" class="form-control" name="commencementdate" ng-model="distributor.commencementDate">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">                                       
+                                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                            <div class="form-group" style="margin-top:0px;">
+                                                <div class="form-group label-floating" style="margin-bottom:0px;">
+                                                <label class="control-label">Credit Handling</label>                                                
+                                                <select ng-model="distributor.creditHandling" class="form-control" name="creditHandling">
+                                                    <option value="" selected hidden />
+                                                    <option value="true">True</option>
+                                                     <option value="false">false</option>
+                                                </select>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                            <div class="form-group label-floating" style="margin-bottom:0px;">
+                                                <label class="control-label">Credit Balance</label>
+                                                <input type="text" class="form-control" name="creditBalance" ng-model="distributor.creditBalance">
+                                            </div>
+                                        </div>
+                                    </div>                                  
+                                    <div class="row">
+                                        <div class="row text-left">
+                                            <button type="submit" class="btn btn-md btn-success" ng-click="createDistributor(distributor);" ><i class="material-icons">add_box</i>&nbsp;Create</button>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

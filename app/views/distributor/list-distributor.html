@@ -1,0 +1,59 @@
+﻿
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header" data-background-color="purple" style="padding:5px 10px 0 10px;">
+                        <div class="row">
+                            <div class="col-xs-3 col-md-8">
+                                <h4 style="margin-bottom:0px;"><strong>Distributors</strong>&nbsp;({{distributors.length}})</h4>
+                            </div>
+                            <div class="col-xs-9 col-md-4">
+                                <div class="pull-right">
+                                    <a ui-sref="distributor.list" class="btn btn-sm btn-default" ng-click="refreshDistributor();"><i class="material-icons">cached</i>&nbsp;Refresh</a>
+                                    <a ui-sref="distributor.create" class="btn btn-sm btn-success"><i class="material-icons">add_box</i>&nbsp;Create</a>
+                                </div>                               
+                            </div>
+                         </div>
+                      </div>
+                    <div class="card-content table-responsive" style="border:none">
+                        <table class="table table-hover">
+                            <thead style="font-size:1.05em;">
+                                <th>Distributor Code</th>
+                                <th>Distributor Name</th>
+                                <th>Depot Name</th>  
+                                <th>Commencement Date</th>                               
+                                <th></th>
+                            </thead>
+                            <tbody style="font-size:.9em" dir-paginate="distributor in distributors | orderBy: '-id' | itemsPerPage: 10 | filter: searchInput">
+                                <tr>
+                                    <td>{{distributor.distributorCode}}</td>
+                                    <td>{{distributor.distributorName}}</td>
+                                    <td>{{distributor.depotCode ? distributor.distributorCode : 'NA' }}</td>
+                                    <td>{{ !distributor.commencementDate ? 'NA' : distributor.commencementDate | date:'mediumDate'}}</td>                                   
+                                    <td class="td-actions text-left">
+                                        <button type="button" rel="tooltip" title="View Distributor" class="btn btn-default btn-simple btn-xs" ui-sref="distributor.view({distributorCode:distributor.distributorCode})">
+                                            <i class="material-icons">visibility</i>
+                                        </button>
+                                        <button type="button" rel="tooltip" title="Edit Distributor" class="btn btn-primary btn-simple btn-xs" ui-sref="distributor.edit({distributorCode:distributor.distributorCode})">
+                                            <i class="material-icons">edit</i>
+                                        </button>
+                                        <button type="button" rel="tooltip" title="Remove Distributor" class="btn btn-danger btn-simple btn-xs" ng-click="deleteDistributor(distributor)">
+                                            <i class="material-icons">close</i>
+                                        </button>                                   
+                                        
+                                    </td>
+                                </tr>                               
+                            </tbody>
+                        </table> 
+                        <dir-pagination-controls max-size="5" direction-links="true" boundry-links="true"></dir-pagination-controls>                
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

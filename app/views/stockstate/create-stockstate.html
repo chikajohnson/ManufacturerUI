@@ -1,0 +1,175 @@
+﻿
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header" data-background-color="purple" style="padding:5px 10px 0 10px;">
+                        <div class="row">
+                            <div class="col-xs-7 col-md-8">
+                                <h4 style="margin-bottom:0px;"><strong>Create Stock State</strong></h4>
+                            </div>
+                            <div class="col-xs-5 col-md-4">
+                                <div class="pull-right">
+                                    <a ui-sref="stockstate.list" class="btn btn-sm btn-default"><i class="material-icons">keyboard_backspace</i>&nbsp;Back To List</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content" ng-init="states=[{'name': 'true', 'value': 'true'},{'name': 'false', 'value': 'false'}]">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <form>
+                                    <div class="row"> 
+                                        <div class="col-xs-12 col-sm-3">
+                                            <div class="form-group label-floating">
+                                                <label class="control-label">Stock State</label>
+                                                <input type="text" class="form-control" name="stockstate" ng-model="stockstate.stockState">
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-3">
+                                            <div class="form-group" style="margin-top:0px;">
+                                                <label for="transferlocation" class="bmd-label-floating">Is Default</label>
+                                                <select class="form-control" id="isdefault" name="isdefault" ng-model="stockstate.isDefault" 
+                                                ng-options="s.value as s.name for s in states" required="true">
+                                                    <option value="" selected hidden />
+                                                </select>
+                                            </div>
+                                        </div> 
+                                        <div class="col-xs-12 col-sm-3">
+                                            <div class="form-group" style="margin-top:0px;">
+                                                <label for="transferlocation" class="bmd-label-floating">Expird State</label>
+                                                <select class="form-control" id="isdefault" name="expiredstate" ng-model="stockstate.expiredState" ng-options="s.value as s.name for s in states" required="true">
+                                                    <option value="" selected hidden />
+                                                </select>
+                                            </div>
+                                        </div> 
+                                        <div class="col-xs-12 col-sm-3">
+                                            <div class="form-group" style="margin-top:0px;">
+                                                <label for="transferlocation" class="bmd-label-floating">Damaged State</label>
+                                                <select class="form-control" id="isdefault" name="damagedstate" ng-model="stockstate.damageState" ng-options="s.value as s.name for s in states" required="true">
+                                                    <option value="" selected hidden />
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-3">
+                                            <div class="form-group" style="margin-top:0px;">
+                                                <label for="transferlocation" class="bmd-label-floating">Close To Expiry</label>
+                                                <select class="form-control" id="isdefault" name="closetoexpiry" ng-model="stockstate.closeToexpiry" ng-options="s.value as s.name for s in states" required="true">
+                                                    <option value="" selected hidden />
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-3">
+                                            <div class="form-group" style="margin-top:0px;">
+                                                <label for="transferlocation" class="bmd-label-floating">Sellable Action</label>
+                                                <select class="form-control" id="isdefault" name="sellableaction" ng-model="stockstate.sellableAction" ng-options="s.value as s.name for s in states" required="true">
+                                                    <option value="" selected hidden />
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-3">
+                                            <div class="form-group" style="margin-top:0px;">
+                                                <label for="transferlocation" class="bmd-label-floating">Issuable Action</label>
+                                                <select class="form-control" id="isdefault" name="issuableaction" ng-model="stockstate.issueAction" ng-options="s.value as s.name for s in states" required="true">
+                                                    <option value="" selected hidden />
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-3">
+                                            <div class="form-group" style="margin-top:0px;">
+                                                <label for="transferlocation" class="bmd-label-floating">Issuable Factory Action</label>
+                                                <select class="form-control" id="isdefault" name="issuablefactoryaction" ng-model="stockstate.issuableFactoryAction" ng-options="s.value as s.name for s in states" required="true">
+                                                    <option value="" selected hidden />
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-3">
+                                            <div class="form-group" style="margin-top:0px;">
+                                                <label for="transferlocation" class="bmd-label-floating">Receipt Action</label>
+                                                <select class="form-control" id="isdefault" name="receiptaction" ng-model="stockstate.receiptAction" ng-options="s.value as s.name for s in states" required="true">
+                                                    <option value="" selected hidden />
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-3">
+                                            <div class="form-group" style="margin-top:0px;">
+                                                <label for="transferlocation" class="bmd-label-floating">Adjustment Action</label>
+                                                <select class="form-control" id="isdefault" name="adjustmentaction" ng-model="stockstate.adjustmentAction" ng-options="s.value as s.name for s in states" required="true">
+                                                    <option value="" selected hidden />
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-3">
+                                            <div class="form-group" style="margin-top:0px;">
+                                                <label for="transferlocation" class="bmd-label-floating">Promotion Action</label>
+                                                <select class="form-control" id="isdefault" name="promotionaction" ng-model="stockstate.promotionAction" ng-options="s.value as s.name for s in states" required="true">
+                                                    <option value="" selected hidden />
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-3">
+                                            <div class="form-group" style="margin-top:0px;">
+                                                <label for="transferlocation" class="bmd-label-floating">Returnable Action</label>
+                                                <select class="form-control" id="isdefault" name="Returnableaction" ng-model="stockstate.returnableAction" ng-options="s.value as s.name for s in states" required="true">
+                                                    <option value="" selected hidden />
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-3">
+                                            <div class="form-group" style="margin-top:0px;">
+                                                <label for="transferlocation" class="bmd-label-floating">Recall Action</label>
+                                                <select class="form-control" id="isdefault" name="recalltaction" ng-model="stockstate.recallAction" ng-options="s.value as s.name for s in states" required="true">
+                                                    <option value="" selected hidden />
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-3">
+                                            <div class="form-group" style="margin-top:0px;">
+                                                <label for="transferlocation" class="bmd-label-floating">Repackage Action</label>
+                                                <select class="form-control" id="isdefault" name="repackageAction" ng-model="stockstate.repackageAction" ng-options="s.value as s.name for s in states" required="true">
+                                                    <option value="" selected hidden />
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-3">
+                                            <div class="form-group" style="margin-top:0px;">
+                                                <label for="transferlocation" class="bmd-label-floating">Assemblage Action</label>
+                                                <select class="form-control" id="isdefault" name="assemblageaction" ng-model="stockstate.assemblageAction" ng-options="s.value as s.name for s in states" required="true">
+                                                    <option value="" selected hidden />
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-3">
+                                            <div class="form-group" style="margin-top:0px;">
+                                                <label for="transferlocation" class="bmd-label-floating">Dissemblage Action</label>
+                                                <select class="form-control" id="isdefault" name="dissemblageaction" ng-model="stockstate.disassemblageAction" ng-options="s.value as s.name for s in states" required="true">
+                                                    <option value="" selected hidden />
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>                        
+                                    <div class="row">
+                                        <div class="row text-left">
+                                            <button type="submit" ng-click="createStockstate(stockstate);" class="btn btn-sm btn-success"><i class="material-icons">add_box</i>&nbsp;Create</button>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

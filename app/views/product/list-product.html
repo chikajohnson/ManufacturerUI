@@ -1,0 +1,57 @@
+﻿
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header" data-background-color="purple" style="padding:5px 10px 0 10px;">
+                        <div class="row">
+                            <div class="col-xs-3 col-md-8">
+                                <h4 style="margin-bottom:0px;"><strong>Products</strong>&nbsp;({{products.length}})</h4>
+                            </div>
+                            <div class="col-xs-9 col-md-4">
+                                <div class="pull-right">
+                                    <a ng-click="refreshProduct();" class="btn btn-sm btn-default"><i class="material-icons">cached</i>&nbsp;Refresh</a>
+                                    <a ui-sref="product.create" class="btn btn-sm btn-success"><i class="material-icons">add_box</i>&nbsp;Create</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content table-responsive" style="border:none">
+                        <table class="table table-hover">
+                            <thead style="font-size:1.05em;">
+                            <th>Product Code</th>
+                            <th>Product Name</th>
+                            <th>MeasurementUnit Code</th>                           
+                            <th></th>
+                            </thead>
+                            <tbody style="font-size:.9em">
+                                <tr dir-paginate="product in products | orderBy: '-id' | itemsPerPage: 10 | filter: searchInput">
+                                    <td>{{product.productCode}}</td>
+                                    <td>{{product.productName}}</td>
+                                    <td>{{product.defaultMeasurementUnitCode = product.defaultMeasurementUnitCode || 'NA'}}</td>                  
+                                    <td class="td-actions text-left">
+                                        <button type="button" rel="tooltip" title="View Product" class="btn btn-default btn-simple btn-xs" ui-sref="product.view({productCode: product.productCode})">
+                                            <i class="material-icons">visibility</i>
+                                        </button>
+                                        <button type="button" rel="tooltip" title="Edit Product" class="btn btn-primary btn-simple btn-xs" ui-sref="product.edit({productCode: product.productCode})">
+                                            <i class="material-icons">edit</i>
+                                        </button>
+                                        <button type="button" rel="tooltip" title="Remove Product with Click" class="btn btn-danger btn-simple btn-xs"  ng-click="deleteProduct(product)">
+                                            <i class="material-icons">close</i>
+                                        </button>
+
+                                    </td>
+                                </tr>                              
+                            </tbody>
+                        </table>
+                        <dir-pagination-controls max-size="5" direction-links="true" boundry-links="true"></dir-pagination-controls>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

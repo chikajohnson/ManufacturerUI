@@ -1,0 +1,76 @@
+﻿
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header" data-background-color="purple" style="padding:5px 10px 0 10px;">
+                        <div class="row">
+                            <div class="col-xs-7 col-md-8">
+                                <h4 style="margin-bottom:0px;"><strong>View Distributor Detail</strong> - {{distributor.distributorName}}</h4>
+                            </div>
+                            <div class="col-xs-5 col-md-4">
+                                <div class="pull-right">
+                                    <a ui-sref="distributor.list" ui-sref-opts="{reload: true}" class="btn btn-sm btn-default"><i class="material-icons">keyboard_backspace</i>&nbsp;Back To List</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <form>
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-6 col-lg-6">
+                                            <div class="form-group label-floating">
+                                                <label for="transferlocation" class="control-label">Depot</label>
+                                                <input type="text" class="form-control" name="depotcode" readonly ng-model="distributor.depotName">
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                            <div class="form-group label-floating">
+                                                <label class="control-label">Distributor Code</label>
+                                                <input type="text" class="form-control" name="distributorcode" readonly ng-model="distributor.distributorCode">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                            <div class="form-group label-floating">
+                                                <label class="control-label">Distributor Name</label>
+                                                <input type="text" class="form-control" name="distributorname" readonly ng-model="distributor.distributorName">
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                            <div class="form-group label-floating">
+                                                <label class="control-label">Commencement Date</label>
+                                                <input type="text" class="form-control" name="commencementdate" readonly value="{{distributor.commencementDate | date:'mediumDate'}}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                            <div class="form-group label-floating">
+                                                <label class="control-label">Credit Handling</label>
+                                                <input type="text" class="form-control" name="credithandling" readonly value="{{distributor.creditHandling}}">
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                            <div class="form-group label-floating">
+                                                <label class="control-label">Credit Balance</label>
+                                                <input type="text" class="form-control" name="creditBalance" readonly value="{{distributor.creditBalance | currency}}">
+                                            </div>
+                                        </div>
+                                    </div>                                   
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

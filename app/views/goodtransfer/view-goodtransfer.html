@@ -1,0 +1,102 @@
+﻿<div class="content" ng-init="hidden=true">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header" data-background-color="purple" style="padding:5px 10px 0 10px;">
+                        <div class="row">
+                            <div class="col-xs-7 col-md-8">
+                                <h4 style="margin-bottom:0px;"><strong>View Goods Transfer Note</strong>  | &nbsp;DocumentNo - {{goodTransfer.documentNo}}</h4>
+                            </div>
+                            <div class="col-xs-5 col-md-4">
+                                <div class="pull-right">
+                                    <a ui-sref="goodtransfer.list" class="btn btn-sm btn-default"><i class="material-icons">keyboard_backspace</i>&nbsp;Back To List</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="row" ng-show="hidden">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group label-floating">
+                                                <label class="control-label">Cross Reference</label>
+                                                <input type="text" class="form-control" name="referenceNumber" ng-model="goodTransfer.crossReference" readonly>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group label-floating">
+                                                <label class="control-label">Vehicle Registration Number</label>
+                                                <input type="text" class="form-control" name="vehicleRegistrationNo" ng-model="goodTransfer.vehicleRegistrationNo" >
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group label-floating">
+                                                <label class="control-label">Driver's name</label>
+                                                <input type="text" class="form-control" name="driverName" readonly ng-model="goodTransfer.driverName">
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <form>
+                                    <div class="row">
+                                        <div class="col-xs-12  col-md-6 ">
+                                            <div class="form-group label-floating">
+                                                <label class="control-label">Transfer Location</label>
+                                                <input type="text" class="form-control" name="transferlocation" ng-model="goodTransfer.transferLocation" readonly >
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12  col-md-6 ">
+                                            <div class="form-group label-floating">
+                                                <label class="control-label">Product Code</label>
+                                                <input type="text" class="form-control" name="productcode" ng-model="goodTransfer.productCode" readonly>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12  col-md-6 ">
+                                            <div class="form-group label-floating">
+                                                <label class="control-label">Product Name</label>
+                                                <input type="text" class="form-control" name="productname" ng-model="goodTransfer.productName" readonly>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xs-12  col-md-6 ">
+                                            <div class="form-group label-floating">
+                                                <label class="control-label">Measurement unit</label>
+                                                <input type="text" class="form-control" name="measurementunit" ng-model="goodTransfer.measurementUnit" readonly>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12  col-md-6 ">
+                                            <div class="form-group label-floating">
+                                                <label class="control-label">Quantity</label>
+                                                <input type="number" class="form-control" name="quantity" ng-model="goodTransfer.receivedQuantity" readonly>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12  col-md-6 ">
+                                            <div class="form-group label-floating">
+                                                <label class="control-label">Stock State</label>
+                                                <input type="text" class="form-control" name="stockstate" ng-model="goodTransfer.stockStateName" readonly>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <div class="form-group label-floating">
+                                                <label class="control-label">Transaction Date</label>
+                                                <input type="text" class="form-control" name="transactionDate" readonly ng-model="goodTransfer.transactionDate">
+                                            </div>
+                                        </div>                                       
+                                    </div>
+                                    
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

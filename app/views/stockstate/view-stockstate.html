@@ -1,0 +1,138 @@
+﻿
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header" data-background-color="purple" style="padding:5px 10px 0 10px;">
+                        <div class="row">
+                            <div class="col-xs-7 col-md-8">
+                                <h4 style="margin-bottom:0px;"><strong>View Stock State</strong> - {{stockstate.stockState}}</h4>
+                            </div>
+                            <div class="col-xs-5 col-md-4">
+                                <div class="pull-right">
+                                    <a ui-sref="stockstate.list" class="btn btn-sm btn-default"><i class="material-icons">keyboard_backspace</i>&nbsp;Back To List</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <form>
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-3">
+                                            <div class="form-group label-floating">
+                                                <label class="control-label">Stock State</label>
+                                                <input type="text" class="form-control" name="stockstate" ng-model="stockstate.StockState">
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-3">
+                                            <div class="form-group" style="margin-top:0px;">
+                                                <label for="isdefault" class="bmd-label-floating">Is Default</label>
+                                                <input type="text" class="form-control" name="Isdefault"  readonly ng-model="stockstate.IsDefault">
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-3">
+                                            <div class="form-group" style="margin-top:0px;">
+                                                <label for="expiredstate" class="bmd-label-floating">Expird State</label>
+                                                <input type="text" class="form-control" name="Expiredstate"   readonly ng-model="stockstate.ExpiredState">
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-3">
+                                            <div class="form-group" style="margin-top:0px;">
+                                                <label for="damagedstate" class="bmd-label-floating">Damaged State</label>
+                                                <input type="text" class="form-control" name="Damagedstate"  readonly ng-model="stockstate.DamageState">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-3">
+                                            <div class="form-group" style="margin-top:0px;">
+                                                <label for="closetoexpiry" class="bmd-label-floating">Close To Expiry</label>
+                                                <input type="text" class="form-control" name="Closetoexpiry"   readonly ng-model="stockstate.CloseToExpiry">
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-3">
+                                            <div class="form-group" style="margin-top:0px;">
+                                                <label for="sellableaction" class="bmd-label-floating">Sellable Action</label>
+                                                <input type="text" class="form-control" name="Sellableaction"   readonly ng-model="stockstate.SellableAction">
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-3">
+                                            <div class="form-group" style="margin-top:0px;">
+                                                <label for="issuableaction" class="bmd-label-floating">Issuable Action</label>
+                                                <input type="text" class="form-control" name="Issuableaction"  v readonly ng-model="stockstate.IssueAction">
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-3">
+                                            <div class="form-group" style="margin-top:0px;">
+                                                <label for="issuablefactoryaction" class="bmd-label-floating">Issuable Factory Action</label>
+                                                <input type="text" class="form-control" name="Issuablefactoryaction"   readonly ng-model="stockstate.IssuableFactoryAction">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-3">
+                                            <div class="form-group" style="margin-top:0px;">
+                                                <label for="receiptaction" class="bmd-label-floating">Receipt Action</label>
+                                                <input type="text" class="form-control" name="Receiptaction"  readonly ng-model="stockstate.ReceiptAction">                                                
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-3">
+                                            <div class="form-group" style="margin-top:0px;">
+                                                <label for="adjustmentaction" class="bmd-label-floating">Adjustment Action</label>
+                                                <input type="text" class="form-control" name="Adjustmentaction"   readonly ng-model="stockstate.AdjustmentAction">
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-3">
+                                            <div class="form-group" style="margin-top:0px;">
+                                                <label for="promotionaction" class="bmd-label-floating">Promotion Action</label>
+                                                <input type="text" class="form-control" name="Promotionaction"   readonly ng-model="stockstate.PromotionAction">
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-3">
+                                            <div class="form-group" style="margin-top:0px;">
+                                                <label for="returnableaction" class="bmd-label-floating">Returnable Action</label>
+                                                <input type="text" class="form-control" name="Returnableaction"  readonly ng-model="stockstate.ReturnableAction">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-3">
+                                            <div class="form-group" style="margin-top:0px;">
+                                                <label for="recalltaction" class="bmd-label-floating">Recall Action</label>
+                                                <input type="text" class="form-control" name="Recallaction"  readonly ng-model="stockstate.RecallAction">
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-3">
+                                            <div class="form-group" style="margin-top:0px;">
+                                                <label for="repackageaction" class="bmd-label-floating">Repackage Action</label>
+                                                <input type="text" class="form-control" name="Repackageaction"  readonly ng-model="stockstate.RepackageAction">
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-3">
+                                            <div class="form-group" style="margin-top:0px;">
+                                                <label for="assemblageaction" class="bmd-label-floating">Assemblage Action</label>
+                                                <input type="text" class="form-control" name="Assemblageaction" readonly ng-model="stockstate.AssemblageAction">
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-3">
+                                            <div class="form-group" style="margin-top:0px;">
+                                                <label for="dissemblageaction" class="bmd-label-floating">Dissemblage Action</label>
+                                                <input type="text" class="form-control" name="Dissemblageaction"  readonly ng-model="stockstate.DisassemblageAction">
+                                            </div>
+                                        </div>
+                                    </div>                                    
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

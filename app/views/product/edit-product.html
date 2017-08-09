@@ -1,0 +1,79 @@
+﻿
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header" data-background-color="purple" style="padding:5px 10px 0 10px;">
+                        <div class="row">
+                            <div class="col-xs-7 col-md-8">
+                                <h4 style="margin-bottom:0px;"><strong>Edit Product</strong> - {{product.productName}}</h4>
+                            </div>
+                            <div class="col-xs-5 col-md-4">
+                                <div class="pull-right">
+                                    <a ui-sref="product.list" class="btn btn-sm btn-default"><i class="material-icons">keyboard_backspace</i>&nbsp;Back To List</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <form>
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                            <div class="form-group label-floating">
+                                                <label class="control-label">Product Code</label>
+                                                <input type="text" class="form-control" name="productCode" ng-model="product.productCode">
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                            <div class="form-group label-floating">
+                                                <label class="control-label">Product Name</label>
+                                                <input type="text" class="form-control" name="productName" ng-model="product.productName">
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">                                            
+                                            <div class="form-group label-floating">
+                                                <label class="control-label">Defualt Measurement Unit</label>
+                                                <input type="text" class="form-control" name="defaultmeasurementunit" ng-model="product.defaultMeasurementUnit">
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="row">                                        
+                                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                            <div class="form-group" style="margin-top:0px;">
+                                                <div class="form-group label-floating">
+                                                    <label class="control-label">Default Measurement Unit Description</label>
+                                                    <input type="text" class="form-control" name="defaultMeasurementUnitDescription" ng-model="product.defaultMeasurementUnitDescription">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                            <div class="form-group" style="margin-top:0px;">
+                                                <div class="form-group label-floating">
+                                                    <label class="control-label">Defualt Price</label>
+                                                    <input type="text" class="form-control" name="defaultPrice" ng-model="product.defaultPrice">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="row text-left">
+                                            <button type="submit" class="btn btn-sm btn-success" ng-click="editProduct(product)"><i class="material-icons">add_box</i>&nbsp;Update</button>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
